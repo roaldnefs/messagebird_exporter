@@ -1,0 +1,44 @@
+language: go
+sudo: false
+matrix:
+  include:
+    # "1.x" always refers to the latest Go version, inc. the patch release.
+    # e.g. "1.x" is 1.11 until 1.11.1 is available
+    - go: 1.x
+      env: LATEST=true
+    - go: 1.10.x
+    - go: 1.11.x
+    - go: 1.12.x
+    - go: tip
+  allow_failures:
+    - go: tip
+
+before_install:
+  # gox simplifies building for multiple architectures
+  - go get github.com/mitchellh/gox
+
+install:
+  - # skip
+
+script:
+  - go get -t -v ./...
+  - diff -u <(echo -n) <(gofmt -d .)
+  - go vet $(go list ./... | grep -v /vendor/)
+  - go test -v -race ./...
+  - if [ "${LATEST}" = "true" ]; then gox -os="linux darwin" -arch="amd64" -output="{{.Dir}}.{{.OS}}.{{.Arch}}" -ldflags "-X main.Rev=`git rev-parse --short HEAD`" -verbose ./...; fi
+
+#deploy:
+#  provider: releases
+#  skip_cleanup: true
+#  api_key:
+#    # The *encrypted* GitHub key, as the output of the Travis CI CLI tool.
+#    secure: "SECRET"
+#  file:
+#    - messagebird_exporter.darwin.amd64
+#    - messagebird_exporter.linux.amd64
+#  on:
+#    # What to repository to build
+#    repo: roaldnefs/messagebird_exporter
+#    # Only build binaries for tagged commits
+#    tags: true
+#    condition: $LATEST = true
