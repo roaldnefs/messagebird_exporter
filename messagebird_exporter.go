@@ -38,9 +38,9 @@ func recordMetrics() {
 						log.Error(fmt.Sprintf("%#v", mbError))
 					}
 				}
+			} else {
+				credits.Set(float64(balance.Amount))
 			}
-
-			credits.Set(float64(balance.Amount))
 
 			time.Sleep(10 * time.Second)
 		}
