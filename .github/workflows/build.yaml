@@ -20,7 +20,7 @@ jobs:
       
       - name: Tests
         run: |
-          go get -t -v ./...
+          go mod tidy
           diff -u <(echo -n) <(gofmt -d .)
           go vet $(go list ./... | grep -v /vendor/)
           go test -v -race ./...
