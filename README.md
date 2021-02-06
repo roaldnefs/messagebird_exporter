@@ -1,31 +1,55 @@
-# MessageBird exporter
+<a href="https://github.com/roaldnefs/messagebird_exporter" style="color: black;">
+    <h1 align="center">MessageBird Exporter</h1>
+</a>
+<p align="center">
+    <a href="https://github.com/roaldnefs/messagebird_exporter/releases">
+        <img src="https://img.shields.io/github/v/release/roaldnefs/messagebird_exporter?style=for-the-badge&color=blue"
+            alt="Latest release version">
+    </a>
+    <a href="https://godoc.org/github.com/roaldnefs/messagebird_exporter">
+        <img src="https://img.shields.io/badge/godoc-reference-5272B4.svg?style=for-the-badge&color=blue"
+            alt="GoDoc">
+    </a>
+    <a href="https://github.com/roaldnefs/messagebird_exporter/blob/master/LICENSE">
+        <img src="https://img.shields.io/github/license/roaldnefs/messagebird_exporter.svg?style=for-the-badge&color=blue"
+            alt="GitHub - License">
+    </a>
+    <!-- <a href="https://github.com/roaldnefs/messagebird_exporter/actions">
+        <img src="https://img.shields.io/github/workflow/status/roaldnefs/messagebird_exporter/tests?style=for-the-badge&color=blue"
+            alt="GitHub Workflow Status">
+    </a> -->
+    <a href="https://github.com/roaldnefs/messagebird_exporter/graphs/contributors">
+        <img src="https://img.shields.io/github/contributors/roaldnefs/messagebird_exporter?style=for-the-badge&color=blue"
+            alt="GitHub contributors">
+    </a>
+    </br>
+    <b>messagebird_exporter</b> is a Prometheus exporter for <a href="https://messagebird.com/en/">MessageBird</a> metrics, written in Go.
+    <br />
+    <a href="https://godoc.org/github.com/roaldnefs/messagebird_exporter"><strong>Explore the docs »</strong></a>
+    <br />
+    <a href="https://github.com/github.com/roaldnefs/messagebird_exporter/issues/new?title=Bug%3A">Report Bug</a>
+    ·
+    <a href="https://github.com/github.com/roaldnefs/messagebird_exporter/issues/new?title=Feature+Request%3A">Request Feature</a>
+</p>
 
-[![Travis CI](https://img.shields.io/travis/roaldnefs/messagebird_exporter.svg?style=for-the-badge)](https://travis-ci.org/roaldnefs/messagebird_exporter)
-[![GoDoc](https://img.shields.io/badge/godoc-reference-5272B4.svg?style=for-the-badge)](https://godoc.org/github.com/roaldnefs/messagebird_exporter)
-[![Github All Releases](https://img.shields.io/github/downloads/roaldnefs/messagebird_exporter/total.svg?style=for-the-badge)](https://github.com/roaldnefs/messagebird_exporter/releases)
-[![GitHub](https://img.shields.io/github/license/roaldnefs/messagebird_exporter.svg?style=for-the-badge)](https://github.com/roaldnefs/messagebird_exporter/blob/master/LICENSE)
-
-Prometheus exporter for MessageBird metrics, written in Go.
+## Introduction
+Prometheus exporter for [MessageBird](https://messagebird.com/en/) metrics, written in Go.
 
 * [Installation](README.md#installation)
      * [Binaries](README.md#binaries)
-	 * [Via Go](README.md#via-go)
+         * [Via Go](README.md#via-go)
 * [Usage](README.md#usage)
 
 ## Installation
-
 ### Binaries
-
 For installation instructions from binaries please visit the [Release Page](https://github.com/roaldnefs/messagebird_exporter/releases).
 
 ### Via Go
-
 ```console
 $ go get github.com/roaldnefs/messagebird_exporter
 ```
 
 ## Usage
-
 ```console
 $ messagebird_exporter --help
 usage: messagebird_exporter --messagebird.api-key=MESSAGEBIRD.API-KEY [<flags>]
