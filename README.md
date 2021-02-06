@@ -27,9 +27,9 @@
     <br />
     <a href="https://godoc.org/github.com/roaldnefs/messagebird_exporter"><strong>Explore the docs »</strong></a>
     <br />
-    <a href="https://github.com/github.com/roaldnefs/messagebird_exporter/issues/new?title=Bug%3A">Report Bug</a>
+    <a href="https://github.com/roaldnefs/messagebird_exporter/issues/new?title=Bug%3A">Report Bug</a>
     ·
-    <a href="https://github.com/github.com/roaldnefs/messagebird_exporter/issues/new?title=Feature+Request%3A">Request Feature</a>
+    <a href="https://github.com/roaldnefs/messagebird_exporter/issues/new?title=Feature+Request%3A">Request Feature</a>
 </p>
 
 ## Introduction
