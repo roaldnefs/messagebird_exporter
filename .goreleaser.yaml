@@ -1,0 +1,19 @@
+project_name: messagebird_exporter
+builds:
+  - env: [CGO_ENABLED=0]
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+nfpms:
+- maintainer: Roald Nefs <info@roaldnefs.com>
+  description: Prometheus exporter for MessageBird metrics.
+  homepage: https://github.com/roaldnefs/messagebird_exporter
+  license: MIT
+  formats:
+  - deb
+  - rpm
+  - apk

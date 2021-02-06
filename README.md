@@ -14,10 +14,10 @@
         <img src="https://img.shields.io/github/license/roaldnefs/messagebird_exporter.svg?style=for-the-badge&color=blue"
             alt="GitHub - License">
     </a>
-    <!-- <a href="https://github.com/roaldnefs/messagebird_exporter/actions">
-        <img src="https://img.shields.io/github/workflow/status/roaldnefs/messagebird_exporter/tests?style=for-the-badge&color=blue"
+    <a href="https://github.com/roaldnefs/messagebird_exporter/actions">
+        <img src="https://img.shields.io/github/workflow/status/roaldnefs/messagebird_exporter/build?style=for-the-badge&color=blue"
             alt="GitHub Workflow Status">
-    </a> -->
+    </a>
     <a href="https://github.com/roaldnefs/messagebird_exporter/graphs/contributors">
         <img src="https://img.shields.io/github/contributors/roaldnefs/messagebird_exporter?style=for-the-badge&color=blue"
             alt="GitHub contributors">
