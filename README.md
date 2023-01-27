@@ -62,6 +62,7 @@ Flags:
               Path under which to expose metrics.
       --messagebird.api-key=MESSAGEBIRD.API-KEY  
               MessageBird Api Key.
+      --version  Show application version.
 
 $ messagebird_exporter --messagebird.api-key=test_myapikey
 INFO[0000] Starting MessageBird Exporter                 version=unknown
