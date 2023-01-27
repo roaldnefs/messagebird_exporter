@@ -8,6 +8,13 @@ builds:
     goarch:
       - amd64
       - arm64
+    ldflags: |
+      -X github.com/prometheus/common/version.BuildDate={{.Date}}
+      -X github.com/prometheus/common/version.BuildUser=goreleaser
+      -X github.com/prometheus/common/version.Revision={{.FullCommit}}
+      -X github.com/prometheus/common/version.Branch={{.Branch}}
+      -X github.com/prometheus/common/version.Version={{.Version}}
+      -X main.version={{.Version}}
 nfpms:
 - maintainer: Roald Nefs <info@roaldnefs.com>
   description: Prometheus exporter for MessageBird metrics.

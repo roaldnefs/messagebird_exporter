@@ -12,6 +12,8 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
+	"github.com/prometheus/common/version"
+
 	"gopkg.in/alecthomas/kingpin.v2"
 
 	log "github.com/sirupsen/logrus"
@@ -64,6 +66,8 @@ func main() {
 		).Required().String()
 	)
 
+	kingpin.Version(version.Print("messagebird_exporter"))
+
 	kingpin.HelpFlag.Short('h')
 	kingpin.Parse()
 
@@ -72,10 +76,11 @@ func main() {
 
 	registry := prometheus.NewRegistry()
 	registry.MustRegister(credits)
+	registry.MustRegister(version.NewCollector("messagebird_exporter"))
 	handler := promhttp.HandlerFor(registry, promhttp.HandlerOpts{})
 
 	log.WithFields(log.Fields{
-		"version": "unknown",
+		"version": version.Version,
 	}).Info("Starting MessageBird Exporter")
 
 	recordMetrics()
